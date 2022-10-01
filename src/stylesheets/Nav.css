@@ -23,6 +23,12 @@
   background-color: rgb(85, 98, 219);
 }
 
+.title {
+  color: white;
+  font-size: 64px;
+  margin-left: -75px;
+}
+
 .home-btn:hover,
 .cart-btn:hover,
 .store-btn:hover {
