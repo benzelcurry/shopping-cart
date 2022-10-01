@@ -4,30 +4,37 @@
   align-items: center;
   height: 100px;
   background-color: rgb(85, 98, 219);
-  border-bottom: solid 2px #80808091;
+}
+
+.left-nav {
+  display: flex;
+  height: 100%;
 }
 
 .home-btn,
-.cart-btn {
+.cart-btn,
+.store-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-grow: 1;
-  max-width: 100px;
   height: 100%;
+  width: 100px;
   cursor: pointer;
   background-color: rgb(85, 98, 219);
 }
 
 .home-btn:hover,
-.cart-btn:hover {
+.cart-btn:hover,
+.store-btn:hover {
   filter: brightness(1.1);
 }
 
-.home-btn { 
-  border-right: solid 2px #80808091;
+a {
+  text-decoration: none;
+  color: white;
 }
 
-.cart-btn {
-  border-left: solid 2px #80808091;
+a:visited {
+  text-decoration: none;
+  color: white;
 }
