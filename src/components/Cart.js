@@ -1,10 +1,10 @@
 import React from 'react';
 import Nav from './Nav';
 
-const Cart = () => {
+const Cart = ({ cart, setCart }) => {
   return (
     <div>
-      <Nav />
+      <Nav cart={cart} setCart={setCart}/>
       You're in the cart
     </div>
   );

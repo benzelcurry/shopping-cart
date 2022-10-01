@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../stylesheets/Nav.css';
 
-const Nav = () => {
+const Nav = ({ cart, setCart }) => {
   return (
     <div className='nav-container'>
       <div className="left-nav">
@@ -10,7 +10,10 @@ const Nav = () => {
         <Link to={'/Store'} className='store-btn'>Store</Link>
       </div>
       <div className="title">Storedew Valley</div>
-      <Link to={'/Cart'} className="cart-btn">Cart</Link>
+      <div className="right-nav">
+        <div className="total-items">{cart}</div>
+        <Link to={'/Cart'} className="cart-btn">Cart</Link>
+      </div>
     </div>
   );
 };

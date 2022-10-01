@@ -1,10 +1,10 @@
 import React from 'react';
 import Nav from './Nav';
 
-const Store = () => {
+const Store = ({ cart, setCart }) => {
   return (
     <div>
-      <Nav />
+      <Nav cart={cart} setCart={setCart}/>
       Items for sale go here
     </div>
   );

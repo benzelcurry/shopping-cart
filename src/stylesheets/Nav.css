@@ -1,3 +1,8 @@
+/* 
+  STYLING CHECKLIST:
+  1. Find and add Stardew font for navbar
+*/
+
 .nav-container {
   display: flex;
   justify-content: space-between;
