@@ -1,0 +1,52 @@
+.store-container {
+  margin: 50px;
+  display: grid;
+  justify-items: center;
+  gap: 50px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  grid-template-rows: 4fr 1fr 1fr 1fr;
+  height: 400px;
+  width: 300px;
+  border: solid 4px burlywood;
+  background-color: #f5d4aa;
+  border-radius: 10px;
+}
+
+.item-frame {
+  display: flex;
+  align-items: center;
+  height: 200px;
+  width: 250px;
+  justify-content: center;
+  border: solid 4px black;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.produce {
+  height: 150px;
+}
+
+.name {
+  font-size: 1.8rem;
+}
+
+.add {
+  height: 40px;
+  border: solid 2px black;
+  border-radius: 10px;
+  background-color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add:hover {
+  filter: brightness(0.9);
+}
