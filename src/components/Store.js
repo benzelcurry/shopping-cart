@@ -21,7 +21,14 @@ import '../stylesheets/Store.css';
 // to handle this. Will need to make everything work in Cart.js
 // as well.
 
-const Store = ({ cart, setCart }) => {
+const Store = ({ cart, setCart, total, setTotal }) => {
+  const addToCart = (item) => {
+    let itemTotal = total[item];
+    itemTotal++;
+
+    setCart(cart + 1);
+    setTotal({ ...total, [item]: itemTotal });
+  }
 
   return (
     <div>
@@ -33,7 +40,7 @@ const Store = ({ cart, setCart }) => {
           </div>
           <div className='name'>Cauliflower</div>
           <div className='price'>$1.49/lb</div>
-          <button className='add'>Add To Cart</button>
+          <button className='add' onClick={() => addToCart('cauliflower')}>Add To Cart</button>
         </div>
 
         <div className='card'>
@@ -42,7 +49,7 @@ const Store = ({ cart, setCart }) => {
           </div>
           <div className='name'>Beets</div>
           <div className='price'>$0.99/lb</div>
-          <button className='add'>Add To Cart</button>
+          <button className='add' onClick={() => addToCart('beets')}>Add To Cart</button>
         </div>
 
         <div className='card'>
@@ -51,7 +58,7 @@ const Store = ({ cart, setCart }) => {
           </div>
           <div className='name'>Corn</div>
           <div className='price'>$0.49/lb</div>
-          <button className='add'>Add To Cart</button>
+          <button className='add' onClick={() => addToCart('corn')}>Add To Cart</button>
         </div>
 
         <div className='card'>
@@ -60,7 +67,7 @@ const Store = ({ cart, setCart }) => {
           </div>
           <div className='name'>Eggplant</div>
           <div className='price'>$1.79/lb</div>
-          <button className='add'>Add To Cart</button>
+          <button className='add' onClick={() => addToCart('eggplant')}>Add To Cart</button>
         </div>
 
         <div className='card'>
@@ -69,7 +76,7 @@ const Store = ({ cart, setCart }) => {
           </div>
           <div className='name'>Garlic</div>
           <div className='price'>$0.39/lb</div>
-          <button className='add'>Add To Cart</button>
+          <button className='add' onClick={() => addToCart('garlic')}>Add To Cart</button>
         </div>
 
         <div className='card'>
@@ -78,7 +85,7 @@ const Store = ({ cart, setCart }) => {
           </div>
           <div className='name'>Green Beans</div>
           <div className='price'>$0.79/lb</div>
-          <button className='add'>Add To Cart</button>
+          <button className='add' onClick={() => addToCart('greenBeans')}>Add To Cart</button>
         </div>
 
         <div className='card'>
@@ -87,7 +94,7 @@ const Store = ({ cart, setCart }) => {
           </div>
           <div className='name'>Kale</div>
           <div className='price'>$2.99/lb</div>
-          <button className='add'>Add To Cart</button>
+          <button className='add' onClick={() => addToCart('kale')}>Add To Cart</button>
         </div>
 
         <div className='card'>
@@ -96,7 +103,7 @@ const Store = ({ cart, setCart }) => {
           </div>
           <div className='name'>Melons</div>
           <div className='price'>$0.59/lb</div>
-          <button className='add'>Add To Cart</button>
+          <button className='add' onClick={() => addToCart('melons')}>Add To Cart</button>
         </div>
 
         <div className='card'>
@@ -105,7 +112,7 @@ const Store = ({ cart, setCart }) => {
           </div>
           <div className='name'>Potatoes</div>
           <div className='price'>$0.29/lb</div>
-          <button className='add'>Add To Cart</button>
+          <button className='add' onClick={() => addToCart('potatoes')}>Add To Cart</button>
         </div>
 
         <div className='card'>
@@ -114,7 +121,7 @@ const Store = ({ cart, setCart }) => {
           </div>
           <div className='name'>Pumpkins</div>
           <div className='price'>$0.49/lb</div>
-          <button className='add'>Add To Cart</button>
+          <button className='add' onClick={() => addToCart('pumpkins')}>Add To Cart</button>
         </div>
 
         <div className='card'>
@@ -123,7 +130,7 @@ const Store = ({ cart, setCart }) => {
           </div>
           <div className='name'>Starfruit</div>
           <div className='price'>$5.99/lb</div>
-          <button className='add'>Add To Cart</button>
+          <button className='add' onClick={() => addToCart('starfruit')}>Add To Cart</button>
         </div>
 
         <div className='card'>
@@ -132,7 +139,7 @@ const Store = ({ cart, setCart }) => {
           </div>
           <div className='name'>Strawberries</div>
           <div className='price'>$2.99/lb</div>
-          <button className='add'>Add To Cart</button>
+          <button className='add' onClick={() => addToCart('strawberries')}>Add To Cart</button>
         </div>
       </div>
     </div>

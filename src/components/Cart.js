@@ -5,19 +5,6 @@ import Nav from './Nav';
 import '../stylesheets/Cart.css'
 
 const Cart = ({ cart, setCart, total, setTotal }) => {
-  // cauliflower: 0,
-  // beets: 0,
-  // corn: 0,
-  // eggplant: 0,
-  // garlic: 0,
-  // greenBeans: 0,
-  // kale: 0,
-  // melons: 0,
-  // poatoes: 0,
-  // pumpkins: 0,
-  // starfruit: 0,
-  // strawberries: 0
-
   // Write function to hide items from display if user doesn't have any in their cart
   return (
     <div>

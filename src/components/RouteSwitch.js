@@ -17,7 +17,7 @@ const RouteSwitch = () => {
     greenBeans: 0,
     kale: 0,
     melons: 0,
-    poatoes: 0,
+    potatoes: 0,
     pumpkins: 0,
     starfruit: 0,
     strawberries: 0
