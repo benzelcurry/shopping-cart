@@ -50,3 +50,16 @@
 .add:hover {
   filter: brightness(0.9);
 }
+
+.purchase-container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.quantity {
+  height: 30px;
+  width: 30px;
+  font-weight: bold;
+}

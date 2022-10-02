@@ -4,6 +4,7 @@ import React from 'react';
 import Nav from './Nav';
 import '../stylesheets/Cart.css'
 
+// Need to calculate what total cost will be and then display it
 const Cart = ({ cart, setCart, total }) => {
   const isCartEmpty = () => {
     let cartTotal = 0;

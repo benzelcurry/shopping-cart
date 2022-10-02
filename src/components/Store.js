@@ -1,6 +1,6 @@
 // Component that displays everything available in the store
 
-import React from 'react';
+import React, { useState } from 'react';
 import Nav from './Nav';
 import Cauliflower from '../images/cauliflower.png';
 import Beet from '../images/beet.png';
@@ -22,11 +22,31 @@ import '../stylesheets/Store.css';
 // as well.
 
 const Store = ({ cart, setCart, total, setTotal }) => {
+  const [amount, setAmount] = useState({
+    cauliflower: 0,
+    beets: 0,
+    corn: 0,
+    eggplant: 0,
+    garlic: 0,
+    greenBeans: 0,
+    kale: 0,
+    melons: 0,
+    potatoes: 0,
+    pumpkins: 0,
+    starfruit: 0,
+    strawberries: 0
+  });
+
+  const changeAmt = (e, item) => {
+    setAmount({ ...amount, [item]: Number(e.target.value)})
+  }
+
   const addToCart = (item) => {
     let itemTotal = total[item];
-    itemTotal++;
+    itemTotal += amount[item];
 
-    setCart(cart + 1);
+    setCart(cart + amount[item]);
+
     setTotal({ ...total, [item]: itemTotal });
   }
 
@@ -40,7 +60,10 @@ const Store = ({ cart, setCart, total, setTotal }) => {
           </div>
           <div className='name'>Cauliflower</div>
           <div className='price'>$1.49/lb</div>
-          <button className='add' onClick={() => addToCart('cauliflower')}>Add To Cart</button>
+          <div className="purchase-container">
+            <input id='cauliflower' className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'cauliflower')} />
+            <button className='add' onClick={() => addToCart('cauliflower')}>Add To Cart</button>
+          </div>
         </div>
 
         <div className='card'>
