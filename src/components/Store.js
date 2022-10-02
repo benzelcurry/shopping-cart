@@ -50,6 +50,7 @@ const Store = ({ cart, setCart, total, setTotal }) => {
     setTotal({ ...total, [item]: itemTotal });
   }
 
+  // Prevent user from adding amount that would equate to more than 99 lbs?
   return (
     <div>
       <Nav cart={cart} setCart={setCart}/>
@@ -61,7 +62,7 @@ const Store = ({ cart, setCart, total, setTotal }) => {
           <div className='name'>Cauliflower</div>
           <div className='price'>$1.49/lb</div>
           <div className="purchase-container">
-            <input id='cauliflower' className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'cauliflower')} />
+            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'cauliflower')} />
             <button className='add' onClick={() => addToCart('cauliflower')}>Add To Cart</button>
           </div>
         </div>
@@ -72,7 +73,10 @@ const Store = ({ cart, setCart, total, setTotal }) => {
           </div>
           <div className='name'>Beets</div>
           <div className='price'>$0.99/lb</div>
-          <button className='add' onClick={() => addToCart('beets')}>Add To Cart</button>
+          <div className="purchase-container">
+            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'beets')} />
+            <button className='add' onClick={() => addToCart('beets')}>Add To Cart</button>
+          </div>
         </div>
 
         <div className='card'>
@@ -81,7 +85,10 @@ const Store = ({ cart, setCart, total, setTotal }) => {
           </div>
           <div className='name'>Corn</div>
           <div className='price'>$0.49/lb</div>
-          <button className='add' onClick={() => addToCart('corn')}>Add To Cart</button>
+          <div className="purchase-container">
+            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'corn')} />
+            <button className='add' onClick={() => addToCart('corn')}>Add To Cart</button>
+          </div>
         </div>
 
         <div className='card'>
@@ -90,7 +97,10 @@ const Store = ({ cart, setCart, total, setTotal }) => {
           </div>
           <div className='name'>Eggplant</div>
           <div className='price'>$1.79/lb</div>
-          <button className='add' onClick={() => addToCart('eggplant')}>Add To Cart</button>
+          <div className="purchase-container">
+            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'eggplant')} />
+            <button className='add' onClick={() => addToCart('eggplant')}>Add To Cart</button>
+          </div>
         </div>
 
         <div className='card'>
@@ -99,7 +109,10 @@ const Store = ({ cart, setCart, total, setTotal }) => {
           </div>
           <div className='name'>Garlic</div>
           <div className='price'>$0.39/lb</div>
-          <button className='add' onClick={() => addToCart('garlic')}>Add To Cart</button>
+          <div className="purchase-container">
+            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'garlic')} />
+            <button className='add' onClick={() => addToCart('garlic')}>Add To Cart</button>
+          </div>
         </div>
 
         <div className='card'>
@@ -108,6 +121,7 @@ const Store = ({ cart, setCart, total, setTotal }) => {
           </div>
           <div className='name'>Green Beans</div>
           <div className='price'>$0.79/lb</div>
+          <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'greenBeans')} />
           <button className='add' onClick={() => addToCart('greenBeans')}>Add To Cart</button>
         </div>
 
@@ -117,7 +131,10 @@ const Store = ({ cart, setCart, total, setTotal }) => {
           </div>
           <div className='name'>Kale</div>
           <div className='price'>$2.99/lb</div>
-          <button className='add' onClick={() => addToCart('kale')}>Add To Cart</button>
+          <div className="purchase-container">
+            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'kale')} />
+            <button className='add' onClick={() => addToCart('kale')}>Add To Cart</button>
+          </div>
         </div>
 
         <div className='card'>
@@ -126,7 +143,10 @@ const Store = ({ cart, setCart, total, setTotal }) => {
           </div>
           <div className='name'>Melons</div>
           <div className='price'>$0.59/lb</div>
-          <button className='add' onClick={() => addToCart('melons')}>Add To Cart</button>
+          <div className="purchase-container">
+            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'melons')} />
+            <button className='add' onClick={() => addToCart('melons')}>Add To Cart</button>
+          </div>
         </div>
 
         <div className='card'>
@@ -135,7 +155,10 @@ const Store = ({ cart, setCart, total, setTotal }) => {
           </div>
           <div className='name'>Potatoes</div>
           <div className='price'>$0.29/lb</div>
-          <button className='add' onClick={() => addToCart('potatoes')}>Add To Cart</button>
+          <div className="purchase-container">
+            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'potatoes')} />
+            <button className='add' onClick={() => addToCart('potatoes')}>Add To Cart</button>
+          </div>
         </div>
 
         <div className='card'>
@@ -144,7 +167,10 @@ const Store = ({ cart, setCart, total, setTotal }) => {
           </div>
           <div className='name'>Pumpkins</div>
           <div className='price'>$0.49/lb</div>
-          <button className='add' onClick={() => addToCart('pumpkins')}>Add To Cart</button>
+          <div className="purchase-container">
+            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'pumpkins')} />
+            <button className='add' onClick={() => addToCart('pumpkins')}>Add To Cart</button>
+          </div>
         </div>
 
         <div className='card'>
@@ -153,7 +179,10 @@ const Store = ({ cart, setCart, total, setTotal }) => {
           </div>
           <div className='name'>Starfruit</div>
           <div className='price'>$5.99/lb</div>
-          <button className='add' onClick={() => addToCart('starfruit')}>Add To Cart</button>
+          <div className="purchase-container">
+            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'starfruit')} />
+            <button className='add' onClick={() => addToCart('starfruit')}>Add To Cart</button>
+          </div>
         </div>
 
         <div className='card'>
@@ -162,7 +191,10 @@ const Store = ({ cart, setCart, total, setTotal }) => {
           </div>
           <div className='name'>Strawberries</div>
           <div className='price'>$2.99/lb</div>
-          <button className='add' onClick={() => addToCart('strawberries')}>Add To Cart</button>
+          <div className="purchase-container">
+            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'strawberries')} />
+            <button className='add' onClick={() => addToCart('strawberries')}>Add To Cart</button>
+          </div>
         </div>
       </div>
     </div>
