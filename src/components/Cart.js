@@ -4,24 +4,61 @@ import React from 'react';
 import Nav from './Nav';
 import '../stylesheets/Cart.css'
 
-const Cart = ({ cart, setCart, total, setTotal }) => {
-  // Write function to hide items from display if user doesn't have any in their cart
+const Cart = ({ cart, setCart, total }) => {
+  const isCartEmpty = () => {
+    let cartTotal = 0;
+
+    for (const val in total) {
+      cartTotal += total[val]
+    }
+
+    return cartTotal;
+  }
+
   return (
     <div>
       <Nav cart={cart} setCart={setCart}/>
       <div className="cart-container">
-        <div className="item">Cauliflower: {total.cauliflower}</div>
-        <div className="item">Beets: {total.beets}</div>
-        <div className="item">Corn: {total.corn}</div>
-        <div className="item">Eggplant: {total.eggplant}</div>
-        <div className="item">Garlic: {total.garlic}</div>
-        <div className="item">Green beans: {total.greenBeans}</div>
-        <div className="item">Kale: {total.kale}</div>
-        <div className="item">Melons: {total.melons}</div>
-        <div className="item">Potatoes: {total.potatoes}</div>
-        <div className="item">Pumpkins: {total.pumpkins}</div>
-        <div className="item">Starfruit: {total.starfruit}</div>
-        <div className="item">Strawberries: {total.strawberries}</div>
+        { isCartEmpty() === 0 &&
+          <div className="item">Your cart is empty!</div>
+        }
+        { total.cauliflower > 0 &&
+          <div className="item">Cauliflower: {total.cauliflower}</div>
+        }
+        { total.beets > 0 &&
+          <div className="item">Beets: {total.beets}</div>
+        }
+        { total.corn > 0 &&
+          <div className="item">Corn: {total.corn}</div>
+        }
+        { total.eggplant > 0 &&
+          <div className="item">Eggplant: {total.eggplant}</div>
+        }
+        { total.garlic > 0 &&
+          <div className="item">Garlic: {total.garlic}</div>
+        }
+        { total.greenBeans > 0 && 
+          <div className="item">Green beans: {total.greenBeans}</div>
+        }
+        { total.kale > 0 &&
+          <div className="item">Kale: {total.kale}</div>
+        }
+        { total.melons > 0 &&
+          <div className="item">Melons: {total.melons}</div>
+        }
+        { total.potatoes > 0 &&
+          <div className="item">Potatoes: {total.potatoes}</div>
+        }
+        { total.pumpkins > 0 &&
+          <div className="item">Pumpkins: {total.pumpkins}</div>
+        }
+        { total.starfruit > 0 &&
+          <div className="item">Starfruit: {total.starfruit}</div>
+        }
+        { total.strawberries > 0 &&
+          <div className="item">Strawberries: {total.strawberries}</div>
+        }
+        
       </div>
     </div>
   );
