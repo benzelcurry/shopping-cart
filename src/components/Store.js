@@ -22,6 +22,7 @@ import '../stylesheets/Store.css';
 // as well.
 
 const Store = ({ cart, setCart }) => {
+
   return (
     <div>
       <Nav cart={cart} setCart={setCart}/>
