@@ -29,6 +29,12 @@ const Cart = ({ cart, setCart, total, setTotal }) => {
   }
 
   const editQuantity = (e, item) => {
+    if (total[item] < e.target.value) {
+      setCart(cart + 1);
+    } else if (total[item] > e.target.value) {
+      setCart(cart - 1);
+    };
+
     setTotal({...total, [item]: e.target.value})
   }
 
