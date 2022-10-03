@@ -151,7 +151,7 @@ const Cart = ({ cart, setCart, total, setTotal }) => {
           </div>
         }  
         { (isCartEmpty() > 0 && calculateTotal() !== 0) &&
-          <div className="error msg">Your total is: ${calculateTotal()}</div>
+          <div className="error msg">Your total is: ${calculateTotal().toFixed(2)}</div>
         }
       </div>
     </div>
