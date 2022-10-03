@@ -41,6 +41,10 @@ const Store = ({ cart, setCart, total, setTotal }) => {
     setAmount({ ...amount, [item]: Number(e.target.value)})
   }
 
+  const preventTyping = (e) => {
+    e.preventDefault();
+  }
+
   const addToCart = (item) => {
     let itemTotal = total[item];
     itemTotal += amount[item];
@@ -62,7 +66,7 @@ const Store = ({ cart, setCart, total, setTotal }) => {
           <div className='name'>Cauliflower</div>
           <div className='price'>$1.49/lb</div>
           <div className="purchase-container">
-            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'cauliflower')} />
+            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'cauliflower')} onKeyDown={(e) => preventTyping(e)} />
             <button className='add' onClick={() => addToCart('cauliflower')}>Add To Cart</button>
           </div>
         </div>
@@ -74,7 +78,7 @@ const Store = ({ cart, setCart, total, setTotal }) => {
           <div className='name'>Beets</div>
           <div className='price'>$0.99/lb</div>
           <div className="purchase-container">
-            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'beets')} />
+            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'beets')} onKeyDown={(e) => preventTyping(e)} />
             <button className='add' onClick={() => addToCart('beets')}>Add To Cart</button>
           </div>
         </div>
@@ -86,7 +90,7 @@ const Store = ({ cart, setCart, total, setTotal }) => {
           <div className='name'>Corn</div>
           <div className='price'>$0.49/lb</div>
           <div className="purchase-container">
-            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'corn')} />
+            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'corn')} onKeyDown={(e) => preventTyping(e)} />
             <button className='add' onClick={() => addToCart('corn')}>Add To Cart</button>
           </div>
         </div>
@@ -98,7 +102,7 @@ const Store = ({ cart, setCart, total, setTotal }) => {
           <div className='name'>Eggplant</div>
           <div className='price'>$1.79/lb</div>
           <div className="purchase-container">
-            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'eggplant')} />
+            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'eggplant')} onKeyDown={(e) => preventTyping(e)} />
             <button className='add' onClick={() => addToCart('eggplant')}>Add To Cart</button>
           </div>
         </div>
@@ -110,7 +114,7 @@ const Store = ({ cart, setCart, total, setTotal }) => {
           <div className='name'>Garlic</div>
           <div className='price'>$0.39/lb</div>
           <div className="purchase-container">
-            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'garlic')} />
+            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'garlic')} onKeyDown={(e) => preventTyping(e)} />
             <button className='add' onClick={() => addToCart('garlic')}>Add To Cart</button>
           </div>
         </div>
@@ -122,7 +126,7 @@ const Store = ({ cart, setCart, total, setTotal }) => {
           <div className='name'>Green Beans</div>
           <div className='price'>$0.79/lb</div>
           <div className="purchase-container">
-            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'greenBeans')} />
+            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'greenBeans')} onKeyDown={(e) => preventTyping(e)} />
             <button className='add' onClick={() => addToCart('greenBeans')}>Add To Cart</button>
           </div>
         </div>
@@ -134,7 +138,7 @@ const Store = ({ cart, setCart, total, setTotal }) => {
           <div className='name'>Kale</div>
           <div className='price'>$2.99/lb</div>
           <div className="purchase-container">
-            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'kale')} />
+            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'kale')} onKeyDown={(e) => preventTyping(e)} />
             <button className='add' onClick={() => addToCart('kale')}>Add To Cart</button>
           </div>
         </div>
@@ -146,7 +150,7 @@ const Store = ({ cart, setCart, total, setTotal }) => {
           <div className='name'>Melons</div>
           <div className='price'>$0.59/lb</div>
           <div className="purchase-container">
-            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'melons')} />
+            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'melons')} onKeyDown={(e) => preventTyping(e)} />
             <button className='add' onClick={() => addToCart('melons')}>Add To Cart</button>
           </div>
         </div>
@@ -158,7 +162,7 @@ const Store = ({ cart, setCart, total, setTotal }) => {
           <div className='name'>Potatoes</div>
           <div className='price'>$0.29/lb</div>
           <div className="purchase-container">
-            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'potatoes')} />
+            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'potatoes')} onKeyDown={(e) => preventTyping(e)} />
             <button className='add' onClick={() => addToCart('potatoes')}>Add To Cart</button>
           </div>
         </div>
@@ -170,7 +174,7 @@ const Store = ({ cart, setCart, total, setTotal }) => {
           <div className='name'>Pumpkins</div>
           <div className='price'>$0.49/lb</div>
           <div className="purchase-container">
-            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'pumpkins')} />
+            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'pumpkins')} onKeyDown={(e) => preventTyping(e)} />
             <button className='add' onClick={() => addToCart('pumpkins')}>Add To Cart</button>
           </div>
         </div>
@@ -182,7 +186,7 @@ const Store = ({ cart, setCart, total, setTotal }) => {
           <div className='name'>Starfruit</div>
           <div className='price'>$5.99/lb</div>
           <div className="purchase-container">
-            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'starfruit')} />
+            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'starfruit')} onKeyDown={(e) => preventTyping(e)} />
             <button className='add' onClick={() => addToCart('starfruit')}>Add To Cart</button>
           </div>
         </div>
@@ -194,7 +198,7 @@ const Store = ({ cart, setCart, total, setTotal }) => {
           <div className='name'>Strawberries</div>
           <div className='price'>$2.99/lb</div>
           <div className="purchase-container">
-            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'strawberries')} />
+            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'strawberries')} onKeyDown={(e) => preventTyping(e)} />
             <button className='add' onClick={() => addToCart('strawberries')}>Add To Cart</button>
           </div>
         </div>

@@ -2,10 +2,22 @@
 
 import React from 'react';
 import Nav from './Nav';
+import Cauliflower from '../images/cauliflower.png';
+import Beet from '../images/beet.png';
+import Corn from '../images/corn.png';
+import Eggplant from '../images/eggplant.png';
+import Garlic from '../images/garlic.png';
+import GreenBean from '../images/green-bean.png';
+import Kale from '../images/kale.png';
+import Melon from '../images/melon.png';
+import Potato from '../images/potato.png';
+import Pumpkin from '../images/pumpkin.png';
+import Starfruit from '../images/starfruit.png';
+import Strawberry from '../images/strawberry.png';
 import '../stylesheets/Cart.css'
 
 // Need to calculate what total cost will be and then display it
-const Cart = ({ cart, setCart, total }) => {
+const Cart = ({ cart, setCart, total, setTotal }) => {
   const isCartEmpty = () => {
     let cartTotal = 0;
 
@@ -14,6 +26,14 @@ const Cart = ({ cart, setCart, total }) => {
     }
 
     return cartTotal;
+  }
+
+  const editQuantity = (e, item) => {
+    setTotal({...total, [item]: e.target.value})
+  }
+
+  const preventTyping = (e) => {
+    e.preventDefault();
   }
 
   const calculateTotal = () => {
@@ -37,11 +57,16 @@ const Cart = ({ cart, setCart, total }) => {
     <div>
       <Nav cart={cart} setCart={setCart}/>
       <div className="cart-container">
-        { isCartEmpty() === 0 &&
+        { (isCartEmpty() === 0 || calculateTotal() === 0) &&
           <div className="item">Your cart is empty!</div>
         }
         { total.cauliflower > 0 &&
-          <div className="item">Cauliflower: {total.cauliflower}</div>
+          <div className="item">
+            <img src={Cauliflower} alt='Cauliflower' className='checkout-img' />
+            {/* Cauliflower: {total.cauliflower} */}
+            <label for='cauliflower'>Cauliflower (lbs): </label>
+            <input id='cauliflower' type='number' value={total.cauliflower} onChange={(e) => editQuantity(e, 'cauliflower')} onKeyDown={(e) => preventTyping(e)} min='0' max='99' />
+          </div>
         }
         { total.beets > 0 &&
           <div className="item">Beets: {total.beets}</div>
@@ -76,7 +101,7 @@ const Cart = ({ cart, setCart, total }) => {
         { total.strawberries > 0 &&
           <div className="item">Strawberries: {total.strawberries}</div>
         }
-        { isCartEmpty() > 0 &&
+        { (isCartEmpty() > 0 && calculateTotal() !== 0) &&
           <div className="item">Your total is: ${calculateTotal()}</div>
         }
         

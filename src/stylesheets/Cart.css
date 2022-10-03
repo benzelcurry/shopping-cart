@@ -3,3 +3,14 @@
   justify-content: center;
   margin-top: 100px;
 }
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.checkout-img {
+  height: 90%;
+  width: auto;
+}
