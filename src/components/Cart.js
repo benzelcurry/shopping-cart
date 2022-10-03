@@ -16,6 +16,23 @@ const Cart = ({ cart, setCart, total }) => {
     return cartTotal;
   }
 
+  const calculateTotal = () => {
+    return (
+      (total.cauliflower * 1.49) +
+      (total.beets * 0.99) +
+      (total.corn * 0.49) +
+      (total.eggplant * 1.79) +
+      (total.garlic * 0.39) +
+      (total.greenBeans * 0.79) +
+      (total.kale * 2.99) +
+      (total.melons * 0.59) +
+      (total.potatoes * 0.29) +
+      (total.pumpkins * 0.49) +
+      (total.starfruit * 5.99) +
+      (total.strawberries * 2.99)
+    )
+  }
+
   return (
     <div>
       <Nav cart={cart} setCart={setCart}/>
@@ -58,6 +75,9 @@ const Cart = ({ cart, setCart, total }) => {
         }
         { total.strawberries > 0 &&
           <div className="item">Strawberries: {total.strawberries}</div>
+        }
+        { isCartEmpty() > 0 &&
+          <div className="item">Your total is: ${calculateTotal()}</div>
         }
         
       </div>

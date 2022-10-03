@@ -121,8 +121,10 @@ const Store = ({ cart, setCart, total, setTotal }) => {
           </div>
           <div className='name'>Green Beans</div>
           <div className='price'>$0.79/lb</div>
-          <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'greenBeans')} />
-          <button className='add' onClick={() => addToCart('greenBeans')}>Add To Cart</button>
+          <div className="purchase-container">
+            <input className='quantity' type='number' placeholder='0' min='0' max='99' onChange={(e) => changeAmt(e, 'greenBeans')} />
+            <button className='add' onClick={() => addToCart('greenBeans')}>Add To Cart</button>
+          </div>
         </div>
 
         <div className='card'>
