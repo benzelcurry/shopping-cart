@@ -5,7 +5,9 @@
 }
 
 .item {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  justify-items: start;
   align-items: center;
   gap: 20px;
 }
@@ -13,4 +15,15 @@
 .checkout-img {
   height: 90%;
   width: auto;
+}
+
+.msg {
+  display: flex;
+  justify-content: center;
+}
+
+.error {
+  border-top: solid 2px black;
+  padding: 20px;
+  margin: 20px;
 }
