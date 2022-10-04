@@ -2,9 +2,14 @@
   STYLING CHECKLIST:
   1. Find and add Stardew font for navbar
 */
+@font-face {
+  font-family: stardew;
+  src: url(../fonts/stardew-valley.ttf)
+}
 
 .nav-container {
   display: flex;
+  font-family: stardew;
   justify-content: space-between;
   align-items: center;
   height: 100px;
@@ -12,11 +17,13 @@
 }
 
 .left-nav {
+  font-size: 28px;
   display: flex;
   height: 100%;
 }
 
 .right-nav {
+  font-size: 28px;
   display: flex;
   height: 100%;
 }
@@ -49,8 +56,13 @@
   background-color: rgb(85, 98, 219);
 }
 
+.cart-btn {
+  width: 120px;
+}
+
 .title {
   color: white;
+  font-weight: 500;
   font-size: 64px;
   margin-left: -75px;
 }
