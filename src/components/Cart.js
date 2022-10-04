@@ -60,7 +60,7 @@ const Cart = ({ cart, setCart, total, setTotal }) => {
   }
 
   return (
-    <div>
+    <div className='cart-page'>
       <Nav cart={cart} setCart={setCart}/>
       <div className="cart-container">
         { (isCartEmpty() === 0 || calculateTotal() === 0) &&
@@ -163,7 +163,10 @@ const Cart = ({ cart, setCart, total, setTotal }) => {
           </div>
         }  
         { (isCartEmpty() > 0 && calculateTotal() !== 0) &&
-          <div className="error msg">Your total is: ${calculateTotal().toFixed(2)}</div>
+          <div className="error msg">
+            <div>Your total is: &nbsp;</div>
+            <div className='total-price'>${calculateTotal().toFixed(2)}</div>
+          </div>
         }
       </div>
     </div>

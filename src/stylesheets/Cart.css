@@ -1,7 +1,15 @@
+.cart-page {
+  display: grid;
+}
+
 .cart-container {
   display: grid;
-  justify-content: center;
-  margin-top: 100px;
+  margin-top: 50px;
+  width: 50%;
+  justify-self: center;
+  color: white;
+  padding: 40px;
+  background-color: rgba(85, 156, 219, 0.558);
 }
 
 .item {
@@ -22,8 +30,12 @@
   justify-content: center;
 }
 
+.total-price {
+  font-weight: bold;
+}
+
 .error {
-  border-top: solid 2px black;
+  border-top: solid 2px white;
   padding: 20px;
   margin: 20px;
 }
