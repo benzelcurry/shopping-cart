@@ -24,7 +24,7 @@ const RouteSwitch = () => {
   });
 
   return (
-    <BrowserRouter basename='/'>
+    <BrowserRouter basename='https://benzelcurry.github.io/shopping-cart'>
       <Routes>
         <Route path='/' element={<Home cart={cart} setCart={setCart}/>} />
         <Route path='/cart' element={<Cart cart={cart} setCart={setCart} total={total} setTotal={setTotal}/>} />
