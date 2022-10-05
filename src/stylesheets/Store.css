@@ -1,5 +1,6 @@
 .store-container {
   margin: 50px;
+  padding-bottom: 50px;
   display: grid;
   justify-items: center;
   gap: 50px;
