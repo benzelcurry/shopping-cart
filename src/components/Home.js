@@ -16,7 +16,7 @@ const Home = ({ cart, setCart }) => {
         </p>
         <p>
           Within this website, you'll find produce items from the popular farming sim
-          game, Stardew Valley. Prices have been modified to reflect rough estimates of
+          game, Stardew Valley, for "sale." Prices have been modified to reflect rough estimates of
           what they'd go for in the average grocery store in real life using USD.
         </p>
         <p>
