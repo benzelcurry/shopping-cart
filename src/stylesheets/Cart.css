@@ -10,6 +10,7 @@
   color: white;
   padding: 40px;
   background-color: rgba(85, 156, 219, 0.558);
+  border-radius: 10px;
 }
 
 .item {

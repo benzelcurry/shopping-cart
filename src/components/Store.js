@@ -16,11 +16,6 @@ import Starfruit from '../images/starfruit.png';
 import Strawberry from '../images/strawberry.png';
 import '../stylesheets/Store.css';
 
-// Going to need to add option to select how many pounds
-// and accordingly implement a state declaration in RouteSwitch.js
-// to handle this. Will need to make everything work in Cart.js
-// as well.
-
 const Store = ({ cart, setCart, total, setTotal }) => {
   const [amount, setAmount] = useState({
     cauliflower: 0,

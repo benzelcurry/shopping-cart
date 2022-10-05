@@ -1,0 +1,29 @@
+.home-page {
+  display: grid;
+}
+
+.about {
+  display: grid;
+  margin-top: 50px;
+  width: 50%;
+  justify-self: center;
+  color: #e5e2e2;
+  padding: 40px;
+  background-color: rgba(85, 156, 219, 0.558);
+  border-radius: 10px;
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+}
+
+.github {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(72deg) brightness(104%) contrast(103%);
+  cursor: pointer;
+  
+}
+
+.github:hover {
+  filter: invert(71%) sepia(37%) saturate(10%) hue-rotate(314deg) brightness(112%) contrast(107%);
+}

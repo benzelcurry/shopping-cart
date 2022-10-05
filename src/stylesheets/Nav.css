@@ -66,7 +66,7 @@
 }
 
 .title {
-  color: white;
+  color: #ffff00;
   font-weight: 500;
   font-size: 64px;
   margin-left: -75px;
@@ -81,10 +81,10 @@
 
 a {
   text-decoration: none;
-  color: white;
+  color: yellow;
 }
 
 a:visited {
   text-decoration: none;
-  color: white;
+  color: yellow;
 }
