@@ -52,6 +52,10 @@
   filter: brightness(0.9);
 }
 
+.add:active {
+  filter: brightness(0.8);
+}
+
 .purchase-container {
   display: grid;
   grid-template-columns: 1fr 5fr;
