@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/shopping-cart/static/css/main.ef629201.css",
-    "main.js": "/shopping-cart/static/js/main.44eb9414.js",
+    "main.js": "/shopping-cart/static/js/main.9cf32d0e.js",
     "static/media/background.png": "/shopping-cart/static/media/background.acdfc8dbe4f82c9a98d4.png",
     "static/media/stardew-valley.ttf": "/shopping-cart/static/media/stardew-valley.94d4418a519004763596.ttf",
     "static/media/github.svg": "/shopping-cart/static/media/github.04be58c17b3d5e9744424d414240dd85.svg",
     "index.html": "/shopping-cart/index.html",
     "main.ef629201.css.map": "/shopping-cart/static/css/main.ef629201.css.map",
-    "main.44eb9414.js.map": "/shopping-cart/static/js/main.44eb9414.js.map"
+    "main.9cf32d0e.js.map": "/shopping-cart/static/js/main.9cf32d0e.js.map"
   },
   "entrypoints": [
     "static/css/main.ef629201.css",
-    "static/js/main.44eb9414.js"
+    "static/js/main.9cf32d0e.js"
   ]
 }
